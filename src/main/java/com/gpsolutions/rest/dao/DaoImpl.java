@@ -142,7 +142,7 @@ public class DaoImpl implements Dao {
 
     @Override
     public Reservation getReserveInfo(int reservationId) throws IOException {
-        synchronized (this.RESERVATIONS) {
+        synchronized (RESERVATIONS) {
             BufferedReader reader = new BufferedReader(new FileReader(RESERVATIONS));
             String sample;
             Reservation reservation = null;
